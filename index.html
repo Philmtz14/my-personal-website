@@ -7,5 +7,49 @@
   <body>
       <h1>Hello World!</h1>
       <script src="script.js"></script>
+      <h2>About me:</h2>
+        <p>Welcome to my journey as a <strong>Sprout Developer</strong></p>
+        <p>I'm attending Flatiron School and i'm in the <strong>Software Engineering Program</strong></p>
+        <p>My goal today is to build a website and tweak it to my preferences</p>
+        <p>I hope you enjoy the work I've put into the start of my new journey!</p>
+      <table>
+        <tr>
+          <th>My thoughts so far:</th>
+        </tr>
+        <tr>
+          <td>Excited</td>
+          <td>Excited I'm starting this new journey</td>
+        </tr> 
+        <tr>
+          <td>Nervous</td>
+          <td>Nervous about the challenges I'll face</td>
+        </tr>
+        <tr>
+          <td>Inspired</td>
+          <td>Inspired to be apart of a new and exciting community knowing that others are in or have been in my shoes</td>
+        </tr>
+      </table>
+      <p><button onclick="myMove()">What does this do?</button></p>
+      <div id = "container">
+        <div id="animate"><strong>Thank you for visiting!</strong></div>
+      </div>
+      <script>
+        function myMove() {
+          let id = null;
+          const elem = document.getElementById("animate");   
+          let pos = 0;
+          clearInterval(id);
+          id = setInterval(frame, 5);
+          function frame() {
+            if (pos == 800) {
+              clearInterval(id);
+            } else {
+              pos++; 
+              elem.style.left = pos + "px"; 
+            }
+          }
+        }
+        </script>
+
   </body>
 </html>
